@@ -12,7 +12,9 @@
 Smart contract files are located in /protocols/USDe/contracts
 
 `USDe.sol`
+
 `EthenaMinting.sol` and the contract it extends, `SingleAdminAccessControl.sol`
+
 `StakedUSDeV2.sol`, the contract it extends, `StakedUSDe.sol` and the additional contract it creates `USDeSilo.sol`
 
 ## Gitbook
