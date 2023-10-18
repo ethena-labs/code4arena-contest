@@ -1,0 +1,7 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
+@aave/core-v3=lib/aave-v3-core/
+@bgd-helpers=lib/aave-helpers/src/
+solidity-utils/=lib/aave-helpers/lib/solidity-utils/src/

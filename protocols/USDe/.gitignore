@@ -1,0 +1,12 @@
+forge-cache
+out/
+.vscode
+.idea
+deployments
+
+broadcast/e2eTestingDeployment.sol/*/*.json
+broadcast/GrantMinter.sol/*/*.json
+broadcast/WhitelistMinter.sol/*/*.json
+
+
+.env

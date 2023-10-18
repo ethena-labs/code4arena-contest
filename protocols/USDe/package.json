@@ -1,0 +1,53 @@
+{
+  "name": "@ethena/usde",
+  "version": "0.0.0",
+  "private": true,
+  "main": "exports/exports.js",
+  "types": "exports/exports.d.ts",
+  "files": [
+    "artifacts",
+    "contracts",
+    "deploy",
+    "deployments",
+    "scripts",
+    "exports",
+    "typechain"
+  ],
+  "scripts": {
+    "install:foundry:deps": "forge install",
+    "postinstall": "pnpm run install:foundry:deps",
+    "build": "forge build",
+    "clean": "rm -rf .turbo node_modules artifacts cache exports out forge-cache",
+    "console": "chisel",
+    "deploy:anvil:localNetwork": "anvil --chain-id 1337 --mnemonic \"$TEST_MNEMONIC\"",
+    "deploy:anvil:localNetwork:background": "anvil --chain-id 1337 --mnemonic \"$TEST_MNEMONIC\" &",
+    "deploy:anvil:localNetwork:background:ci": "anvil --chain-id 1337 &",
+    "deploy:anvil:publicNetworkFork": "anvil --chain-id 1337 --fork-url $TEST_FORK_URL --mnemonic \"$TEST_MNEMONIC\"",
+    "deploy:anvil:publicNetworkFork:background": "anvil --chain-id 1337 --fork-url $TEST_FORK_URL --mnemonic \"$TEST_MNEMONIC\" &",
+    "node": "anvil",
+    "size-contracts": "forge build --sizes",
+    "test": "forge test -vvv",
+    "test:coverage": "forge coverage",
+    "test:debug": "forge test -vvvv",
+    "test:gas": "forge test --gas-report",
+    "test:e2eTestingDeployment": "npx wait-port 8545 && forge script script/e2eTestingDeployment.sol --rpc-url $ANVIL_RPC_URL --private-key $TEST_PRIVATE_KEY --ffi --broadcast",
+    "test:e2eTestingDeployment:ci": "npx wait-port 8545 && forge script script/e2eTestingDeployment.sol --rpc-url http://127.0.0.1:8545 --private-key $TEST_PRIVATE_KEY --ffi --broadcast",
+    "test:coverage:lending": "forge coverage --fork-url $TEST_FORK_URL --report lcov && lcov --ignore-errors unused --remove ./lcov.info -o ./lcov.info.p --include 'contracts/lending/tokens/USDe' &&  genhtml ./lcov.info.p -o coverage-lending-partial --branch-coverage",
+    "test:deployCreate2": "npx wait-port 8545 && cast rpc anvil_setCode 0x4e59b44847b379578588920ca78fbf26c0b4956c 0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe03601600081602082378035828234f58015156039578182fd5b8082525050506014600cf3"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@ethena/eslint-config": "workspace:*",
+    "@ethena/prettier-config": "workspace:*",
+    "@ethena/typescript-config": "workspace:*",
+    "cross-env": "7.0.0",
+    "dotenv": "16.0.3",
+    "eslint": "8.29.0",
+    "prettier": "2.8.1",
+    "prettier-plugin-solidity": "1.1.0",
+    "ts-generator": "0.1.1",
+    "ts-node": "10.9.1",
+    "typechain": "8.1.1",
+    "typescript": "4.9.4"
+  }
+}
