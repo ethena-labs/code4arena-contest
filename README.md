@@ -18,7 +18,7 @@ Smart contract files are located in /protocols/USDe/contracts
 `StakedUSDeV2.sol`, the contract it extends, `StakedUSDe.sol` and the additional contract it creates `USDeSilo.sol`
 
 ## Gitbook
-To get an overview of Ethena, please visit our gitbook: https://ethena-labs.gitbook.io/ethena-labs/10CaMBZwnrLWSUWzLS2a/
+To get an overview of Ethena, please visit our gitbook: [https://ethena-labs.gitbook.io/ethena-labs/#overview](https://ethena-labs.gitbook.io/ethena-labs/#overview)
 
 ## Goals
 
