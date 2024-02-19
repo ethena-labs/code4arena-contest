@@ -26,7 +26,7 @@ The goal of Ethena is to offer a permissionless stablecoin, USDe, to defi users 
 
 ## How Ethena generated yield
 
-Users mint USDe with stETH, and Ethena opens an equvilant short ETH perps position on perps exchanges. stETH yields 3-4% annualized, while short ETH perps yield 6-8%. The combined long and short position daily yield is sent to an insurance fund, and then sent to the staking contract every 8 hours.
+Users mint USDe with stETH, and Ethena opens an equivalent short ETH perps position on perps exchanges. stETH yields 3-4% annualized, while short ETH perps yield 6-8%. The combined long and short position daily yield is sent to an insurance fund, and then sent to the staking contract every 8 hours.
 
 ## How we maintain delta neutrality
 
